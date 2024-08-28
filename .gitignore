@@ -1,0 +1,32 @@
+# Ignorowanie środowiska wirtualnego
+.venv/
+venv/
+env/
+ENV/
+
+# Ignorowanie plików baz danych
+db.sqlite3
+*.sqlite3
+
+# Ignorowanie plików konfiguracyjnych systemu i edytora
+__pycache__/
+*.py[cod]
+*.swp
+*~
+*.log
+*.pot
+*.pyc
+.DS_Store
+.idea/
+.vscode/
+
+# Ignorowanie plików tymczasowych
+*.tmp
+*.bak
+
+# Ignorowanie plików i folderów wygenerowanych automatycznie przez Django
+/staticfiles/
+/media/
+
+# Ignorowanie sekretnych kluczy i plików z wrażliwymi danymi
+*.env
