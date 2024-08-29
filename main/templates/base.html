@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Portfolio{% endblock %}</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'main/style.css' %}">
+</head>
+<body>
+    <!-- Pasek nawigacyjny -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="{% url 'home' %}">Main Page</a></li>
+            <li><a href="{% url 'about_me' %}">About Me</a></li>
+            <li><a href="{% url 'projects' %}">Projects</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Główna zawartość strony -->
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

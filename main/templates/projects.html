@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'main/style.css' %}">
+</head>
+<body>
+    <!-- Pasek nawigacyjny -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="{% url 'home' %}">Main Page</a></li>
+            <li><a href="{% url 'about_me' %}">About Me</a></li>
+            <li><a href="{% url 'projects' %}">Projects</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h1>Projects</h1>
+    <p>Here you can showcase your projects.</p>
+    <div class="projects-list">
+        <div class="project-item">
+            <h2>Project 1</h2>
+            <p>Brief description of Project 1.</p>
+        </div>
+        <div class="project-item">
+            <h2>Project 2</h2>
+            <p>Brief description of Project 2.</p>
+        </div>
+        <div class="project-item">
+            <h2>Project 3</h2>
+            <p>Brief description of Project 3.</p>
+        </div>
+        <!-- Dodaj więcej projektów według potrzeb -->
+    </div>
+</body>
+</html>

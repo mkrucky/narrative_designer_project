@@ -1,14 +1,47 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'main/style.css' %}">
-</head>
-<body>
-    <h1>Welcome to My Portfolio!</h1>
-    <p>This is a simple portfolio website.</p>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %}Main Page{% endblock %}
+
+{% block content %}
+    {% load static %}
+
+    <div class="home-layout">
+        <!-- Lewa kolumna -->
+        <div class="left-side">
+            <h2>Hey, it's <span class="highlight">Magda!</span>
+              <br>  Your next <span class="highlight"> Narrative
+                <br> Designer.</span></h2>
+            <img src="{% static 'main/images/media.png' %}" alt="Lewy obrazek" class="left-image">
+        </div>
+
+        <!-- Prawa kolumna -->
+        <div class="right-side">
+            <img src="{% static 'main/images/portfolio_photo.png' %}" alt="Prawy obrazek" class="right-image">
+        </div>
+    </div>
+
+    <!-- Napis poniżej kontenerów -->
+    <h2 class="works-title">Exemplary works in <span class="highlight"> English</span></h2>
+
+    <!-- Kontenery na środku strony z obrazkami -->
+    <div class="container">
+        <div class="box">
+            <a href="https://app.milanote.com/1S8LFT1ChV4R2e/dreams-of-the-desert-world-building?p=pOP2VPkl9GY" target="_blank">
+                <img src="{% static 'main/images/kontener1.png' %}" alt="Przykładowa praca 1" class="work-image">
+                <p class="work-description">Milanote Board <br>
+                <span class="highlight"> Worldbuilding for a non-existing game "Dreams of the Desert" </span></p>
+            </a>
+        </div>
+        <div class="box">
+            <a href="https://docs.google.com/document/d/1eW7-9R21IHuWR4JBptNRyBd5REJ961DkCTkIykgF52Q/edit?usp=sharing" target="_blank">
+                <img src="{% static 'main/images/kontener2.png' %}" alt="Przykładowa praca 2" class="work-image">
+                <p class="work-description">High-level Game Design Document <span class="highlight"> for a non-existing game "Dreams of the Desert"</span></p>
+            </a>
+        </div>
+        <div class="box">
+            <a href="https://docs.google.com/document/d/129-cPLoVhIYNHmf4R0vFUl2GAoSXC8K-EmGRlmsnzCI/edit" target="_blank">
+                <img src="{% static 'main/images/kontener3.png' %}" alt="Przykładowa praca 3" class="work-image">
+                <p class="work-description">Quest: The song of the Silent Stones <span class="highlight"> from a non-existing game "Dreams of the Desert"</span></p>
+            </a>
+        </div>
+    </div>
+{% endblock %}
